@@ -12,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,16 +38,10 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
     ArrayList<SizeClass> unchangedSize = new ArrayList<>();
     ArrayList<SizeClass> unchangedSizeBase = new ArrayList<>();
 
-    SizeClass test;
-
-
-
     private SlidrInterface slidr;
     private SlidrConfig config= new SlidrConfig.Builder()
             .position(SlidrPosition.LEFT)
             .build();
-
-    private SDOpenHelper sdOpenHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +50,8 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
         final SharedPreferences sharedPreferences = this.getSharedPreferences("PersonDB", Context.MODE_PRIVATE);
         Log.v("test_2",(sharedPreferences.getString("totalLength","")));
 
+        Toolbar toolbar=findViewById(R.id.save_toolbar);
+        setSupportActionBar(toolbar);
 
         slidr= Slidr.attach(this,config);
         slidr.unlock();
@@ -76,10 +73,6 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
         CheckBox save_cb3 = findViewById(R.id.save_cb3);
         CheckBox save_cb4 = findViewById(R.id.save_cb4);
         CheckBox save_cb5 = findViewById(R.id.save_cb5);
-        CheckBox save_cb6 = findViewById(R.id.save_cb6);
-        CheckBox save_cb7 = findViewById(R.id.save_cb7);
-        CheckBox save_cb8 = findViewById(R.id.save_cb8);
-        CheckBox save_cb9 = findViewById(R.id.save_cb9);
 
         checkBoxes.add(save_cb0);
         checkBoxes.add(save_cb1);
@@ -87,12 +80,8 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
         checkBoxes.add(save_cb3);
         checkBoxes.add(save_cb4);
         checkBoxes.add(save_cb5);
-        checkBoxes.add(save_cb6);
-        checkBoxes.add(save_cb7);
-        checkBoxes.add(save_cb8);
-        checkBoxes.add(save_cb9);
 
-        for (int k = 0; k < 10; k++) {
+        for (int k = 0; k < 6; k++) {
             checkBoxes.get(k).setOnCheckedChangeListener(this);
             checkBoxes.get(k).setVisibility(View.INVISIBLE);
         }
@@ -102,7 +91,6 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
             checkBoxes.get(l).setText(items.get(l));
         }
 
-        /**사용자 정보 sizeClass 에서 sizeInfo 받아오기**/
         ArrayList<Float> Info2 = new ArrayList<>();
         Info2.add(Float.parseFloat(sharedPreferences.getString("totalLength","")));
         Info2.add(Float.parseFloat(sharedPreferences.getString("waist","")));
@@ -113,10 +101,10 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
         myFit.setSizeInfo(Info2);
 
         checkedSize.add(myFit);
+        System.out.println("checkedsize"+checkedSize.size());
 
         //recycler adapter
-        /**column 너비 조정 필요**/
-        recyclerView=findViewById(R.id.recycler_saveSize);
+        recyclerView=findViewById(R.id.save_recycler_size);
         reSizeAdapter=new ReSizeAdapter(getApplicationContext(),checkedSize);
         recyclerView.setAdapter(reSizeAdapter);
 
@@ -142,7 +130,7 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
             }
         }
 
-        recyclerView=findViewById(R.id.recycler_saveSize);
+        recyclerView=findViewById(R.id.save_recycler_size);
         reSizeAdapter=new ReSizeAdapter(getApplicationContext(),checkedSize);
         recyclerView.setAdapter(reSizeAdapter);
 

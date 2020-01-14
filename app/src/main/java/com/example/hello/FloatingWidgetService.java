@@ -78,7 +78,7 @@ public class FloatingWidgetService extends Service implements View.OnClickListen
 
         //Initially the Removing widget view is not visible, so set visibility to GONE
         removeFloatingWidgetView.setVisibility(View.GONE);
-        remove_image_view = (ImageView) removeFloatingWidgetView.findViewById(R.id.remove_img);
+        remove_image_view = removeFloatingWidgetView.findViewById(R.id.remove_img);
 
         //Add the view to the window
         mWindowManager.addView(removeFloatingWidgetView, paramRemove);

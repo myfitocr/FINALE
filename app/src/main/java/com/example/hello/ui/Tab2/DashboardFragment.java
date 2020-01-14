@@ -64,7 +64,6 @@ public class DashboardFragment extends Fragment {
         sdOpenHelper=new SDOpenHelper(getContext());
         sdOpenHelper.open().create();
         int a = ((MainActivity)getActivity()).code_1;
-        System.out.println("code_1"+a);
 
         if(((MainActivity)getActivity()).code_1 == 20){
             Uri uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
@@ -76,41 +75,32 @@ public class DashboardFragment extends Fragment {
                 recentUri = Uri.parse("content://media/external/images/media/" + idColumn);
             }while (cursor.moveToNext());
 
-            /**dataBase 에서 uriList 받아오기**/
-            uriList=sdOpenHelper.getPhotoArray(sdOpenHelper.mDB);
-
+            uriList=sdOpenHelper.getPhotoArray(SDOpenHelper.mDB);
             uriList.add(recentUri.toString());
 
-            /**dataBase 에 recentUri 추가하기**/
             sdOpenHelper.addPhoto(recentUri.toString());
         }
         else {
-            /**dataBase 에서 uriList 받아오기**/
-            uriList = sdOpenHelper.getPhotoArray(sdOpenHelper.mDB);
+            uriList = sdOpenHelper.getPhotoArray(SDOpenHelper.mDB);
         }
 
-        /**get saveList from database**/
-        stringList=sdOpenHelper.getSizeArray(sdOpenHelper.mDB); //ArrayList<String>
+        stringList=sdOpenHelper.getSizeArray(SDOpenHelper.mDB); //ArrayList<String>
         for (int i=0;i<stringList.size();i++){
             saveList.add(getSizeInfo(stringList.get(i))); //String-> ArrayList<SizeClass>-> ArrayList<ArrayList<SizeClass>>
-            System.out.println("String"+stringList.get(i));
-            System.out.println("getSizeInfo"+getSizeInfo(stringList.get(i)).size());
-            System.out.println("saveListSize"+saveList.size());
         }
 
-        //recycler adapter
-        recyclerView=view.findViewById(R.id.save_recycler);
-        reSaveAdapter=new ReSaveAdapter(getContext(), uriList, saveList);
-        System.out.println("saveList length"+saveList.size());
-        System.out.println("saveList get0"+saveList.get(0).size());
-        recyclerView.setAdapter(reSaveAdapter);
+        if (uriList.size()!=0){
+            //recycler adapter
+            recyclerView=view.findViewById(R.id.save_recycler);
+            reSaveAdapter=new ReSaveAdapter(getContext(), uriList, saveList);
+            recyclerView.setAdapter(reSaveAdapter);
 
-        //layout manager
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
-        SnapHelper snapHelper=new PagerSnapHelper();
-        recyclerView.setLayoutManager(layoutManager);
-        snapHelper.attachToRecyclerView(recyclerView);
-
+            //layout manager
+            RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+            SnapHelper snapHelper=new PagerSnapHelper();
+            recyclerView.setLayoutManager(layoutManager);
+            snapHelper.attachToRecyclerView(recyclerView);
+        }
         return view;
     }
     /*  start floating widget service  */
@@ -118,12 +108,10 @@ public class DashboardFragment extends Fragment {
 
     private ArrayList<SizeClass> getSizeInfo(String getSize){
         String[] array=getSize.split("\n");
-        System.out.println("arraySize"+array.length);
         ArrayList<SizeClass> sizeClasses=new ArrayList<>();
 
         for(int i=1;i<array.length;i++){
             String[] getSizeInfo=array[i].split(" ");
-            System.out.println("getSizeInfoSize"+getSizeInfo.length);
             SizeClass sizeClass=new SizeClass(getSizeInfo[0]);
 
             ArrayList<Float> info=new ArrayList<>();
