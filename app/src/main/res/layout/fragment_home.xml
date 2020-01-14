@@ -232,7 +232,7 @@
         android:id="@+id/waist"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="  39"
         android:inputType="numberDecimal"
@@ -244,7 +244,7 @@
         android:id="@+id/thigh"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="28.5"
         android:inputType="numberDecimal"
@@ -256,7 +256,7 @@
         android:id="@+id/rise"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="  27"
         android:inputType="numberDecimal"
@@ -276,6 +276,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.986" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
