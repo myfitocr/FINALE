@@ -26,9 +26,6 @@ public class NotificationsFragment extends Fragment {
                 ViewModelProviders.of(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
 
-        ImageView imageView = root.findViewById(R.id.memoji);
-        imageView.setImageResource(R.drawable.memoji);
-
         return root;
 
     }
