@@ -78,6 +78,7 @@ public class PantsActivity extends AppCompatActivity implements CompoundButton.O
 
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("MyFit");
 
 
         final SharedPreferences sharedPreferences = this.getSharedPreferences("PersonDB", Context.MODE_PRIVATE);

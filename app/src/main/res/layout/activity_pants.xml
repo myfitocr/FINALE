@@ -16,9 +16,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="#cfd8dc"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
+            android:theme="@style/ToolbarTheme"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -51,24 +51,23 @@
                 android:text="S"
                 android:textSize="20sp"
                 android:button="@android:color/transparent"
-                android:background="@drawable/checkbox_checkbox1"
+                android:background="@drawable/checkbox_checkbox2"
                 android:gravity="center"
                 android:layout_marginLeft="15dp">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="S"
                 android:textSize="20sp"
                 android:button="@android:color/transparent"
-                android:background="@drawable/checkbox_checkbox1"
+                android:background="@drawable/checkbox_checkbox2"
                 android:gravity="center"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/cb1">
-</androidx.appcompat.widget.AppCompatCheckBox>
+            </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:layout_width="40dp"
@@ -76,82 +75,48 @@
                 android:text="S"
                 android:textSize="20sp"
                 android:button="@android:color/transparent"
-                android:background="@drawable/checkbox_checkbox1"
+                android:background="@drawable/checkbox_checkbox2"
                 android:gravity="center"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/cb2">
-</androidx.appcompat.widget.AppCompatCheckBox>
+            </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="S"
                 android:textSize="20sp"
                 android:button="@android:color/transparent"
-                android:background="@drawable/checkbox_checkbox1"
+                android:background="@drawable/checkbox_checkbox2"
                 android:gravity="center"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/cb3">
-</androidx.appcompat.widget.AppCompatCheckBox>
+            </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="S"
                 android:textSize="20sp"
                 android:button="@android:color/transparent"
-                android:background="@drawable/checkbox_checkbox1"
+                android:background="@drawable/checkbox_checkbox2"
                 android:gravity="center"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/cb4">
-</androidx.appcompat.widget.AppCompatCheckBox>
+            </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-   android:layout_width="40dp"
+                android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:text="S"
                 android:textSize="20sp"
                 android:button="@android:color/transparent"
-                android:background="@drawable/checkbox_checkbox1"
+                android:background="@drawable/checkbox_checkbox2"
                 android:gravity="center"
                 android:layout_marginLeft="15dp"
                 android:id="@+id/cb5">
-
             </androidx.appcompat.widget.AppCompatCheckBox>
 
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
-
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
-
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
-
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
 
 </LinearLayout>
 
@@ -170,7 +135,8 @@
                 <TableRow>
 
                     <TextView
-                        android:layout_width="15dp"
+                        android:fontFamily="@font/notosan"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="SIZE"
                         android:gravity="center"
@@ -179,7 +145,8 @@
                     </TextView>
 
                     <TextView
-                        android:layout_width="10dp"
+                        android:fontFamily="@font/notosan"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="총장"
                         android:gravity="center"
@@ -188,25 +155,28 @@
                     </TextView>
 
                     <TextView
+                        android:fontFamily="@font/notosan"
                         android:id="@+id/tr2"
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="허리단면">
+                        android:text="허리">
 
                     </TextView>
 
                     <TextView
-                        android:layout_width="30dp"
+                        android:fontFamily="@font/notosan"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:text="허벅지단면"
+                        android:text="허벅지"
                         android:gravity="center"
                         android:id="@+id/tr3">
 
                     </TextView>
 
                     <TextView
-                        android:layout_width="10dp"
+                        android:fontFamily="@font/notosan"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="밑위"
                         android:gravity="center"
@@ -215,9 +185,10 @@
                     </TextView>
 
                     <TextView
+                        android:fontFamily="@font/notosan"
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:text="밑단단면"
+                        android:text="밑단"
                         android:gravity="center"
                         android:id="@+id/tr5">
 
@@ -241,22 +212,33 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
 
             <Button
                 android:id="@+id/create2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="옷사진" />
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/start_shopping"
+                android:drawableTop="@drawable/shopping"
+                android:gravity="center"
+                android:layout_marginLeft="90dp"
+                android:paddingTop="10dp"/>
 
             <Button
                 android:id="@+id/create3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="쇼핑더" />
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/start_shopping"
+                android:drawableTop="@drawable/startshopping"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="60dp"
+                android:paddingTop="10dp"/>
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 

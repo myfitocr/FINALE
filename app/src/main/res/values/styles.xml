@@ -34,4 +34,8 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:fontFamily">@font/measurementfont</item>
+    </style>
+
 </resources>
