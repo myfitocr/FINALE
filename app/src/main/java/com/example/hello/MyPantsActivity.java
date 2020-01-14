@@ -52,6 +52,7 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
 
         Toolbar toolbar=findViewById(R.id.save_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("MyFit");
 
         slidr= Slidr.attach(this,config);
         slidr.unlock();

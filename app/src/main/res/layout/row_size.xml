@@ -20,7 +20,8 @@
         <TableRow>
 
             <TextView
-                android:layout_width="15dp"
+                android:fontFamily="@font/notosan"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:text="SIZE"
                 android:gravity="center"
@@ -30,7 +31,8 @@
             </TextView>
 
             <TextView
-                android:layout_width="10dp"
+                android:fontFamily="@font/notosan"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:text="총장"
                 android:gravity="center"
@@ -40,6 +42,7 @@
             </TextView>
 
             <TextView
+                android:fontFamily="@font/notosan"
                 android:id="@+id/tr2"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
@@ -50,7 +53,8 @@
             </TextView>
 
             <TextView
-                android:layout_width="30dp"
+                android:fontFamily="@font/notosan"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:text="허벅지단면"
                 android:gravity="center"
@@ -60,7 +64,8 @@
             </TextView>
 
             <TextView
-                android:layout_width="10dp"
+                android:fontFamily="@font/notosan"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:text="밑위"
                 android:gravity="center"
@@ -70,6 +75,7 @@
             </TextView>
 
             <TextView
+                android:fontFamily="@font/notosan"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:text="밑단단면"

@@ -4,7 +4,7 @@
     <item android:state_checked="false">
         <shape
             android:shape="oval">
-            <stroke android:color="#d7ccc8" android:width="1dp" />
+            <stroke android:color="#cfd8dc" android:width="1dp" />
             <solid android:color="@android:color/transparent" />
             <size
                 android:width="40dp"
@@ -19,8 +19,8 @@
             <item>
                 <shape
                     android:shape="oval">
-                    <stroke android:color="#d7ccc8" android:width="1dp" />
-                    <solid android:color="#d7ccc8" />
+                    <stroke android:color="#cfd8dc" android:width="1dp" />
+                    <solid android:color="#cfd8dc" />
                     <size
                         android:width="10dp"
                         android:height="10dp">
