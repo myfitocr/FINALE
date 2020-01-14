@@ -48,11 +48,11 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         createbtn = root.findViewById(R.id.create);
 
-        final TextView totalLengthTextView = (TextView) root.findViewById(R.id.totalLegnth);
-        final TextView waistTextView = (TextView) root.findViewById(R.id.waist);
-        final TextView thighTextView = (TextView) root.findViewById(R.id.thigh);
-        final TextView riseTextView = (TextView) root.findViewById(R.id.rise);
-        final TextView hemcrossTextView = (TextView) root.findViewById(R.id.hemcross);
+        final TextView totalLengthTextView = root.findViewById(R.id.totalLegnth);
+        final TextView waistTextView = root.findViewById(R.id.waist);
+        final TextView thighTextView = root.findViewById(R.id.thigh);
+        final TextView riseTextView = root.findViewById(R.id.rise);
+        final TextView hemcrossTextView = root.findViewById(R.id.hemcross);
 
         if (!sharedPreferences.getString("totalLength", "not").equals("not")){
             totalLengthTextView.setText(sharedPreferences.getString("totalLength",""));

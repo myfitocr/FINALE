@@ -1,104 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PantsActivity"
-    android:orientation="vertical"
-    android:weightSum="10">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="horizontal"
-        android:weightSum="10">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/pantsImage"
-            android:layout_width="259dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/create2"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="옷사진"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.765" />
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
 
-        <Button
-            android:id="@+id/create3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="쇼핑더"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.765" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="466dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pantsImage"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:padding="10dp">
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/cb0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="S"
+                android:textSize="20sp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_checkbox1"
+                android:gravity="center"
+                android:layout_marginLeft="15dp">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
 
-            </androidx.appcompat.widget.AppCompatCheckBox>
-
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="S"
+                android:textSize="20sp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_checkbox1"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cb1">
+</androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
-
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
-
-            </androidx.appcompat.widget.AppCompatCheckBox>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="S"
+                android:textSize="20sp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_checkbox1"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cb2">
+</androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cb5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="S">
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="S"
+                android:textSize="20sp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_checkbox1"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cb3">
+</androidx.appcompat.widget.AppCompatCheckBox>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="S"
+                android:textSize="20sp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_checkbox1"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cb4">
+</androidx.appcompat.widget.AppCompatCheckBox>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+   android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="S"
+                android:textSize="20sp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_checkbox1"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cb5">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
@@ -134,26 +153,24 @@
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
-        </LinearLayout>
+</LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="7">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sizeTable"
-                android:stretchColumns="*">
+                android:stretchColumns="*"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
                 <TableRow>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="15dp"
                         android:layout_height="wrap_content"
                         android:text="SIZE"
                         android:gravity="center"
@@ -162,7 +179,7 @@
                     </TextView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="10dp"
                         android:layout_height="wrap_content"
                         android:text="총장"
                         android:gravity="center"
@@ -172,7 +189,7 @@
 
                     <TextView
                         android:id="@+id/tr2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="허리단면">
@@ -180,7 +197,7 @@
                     </TextView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:text="허벅지단면"
                         android:gravity="center"
@@ -189,7 +206,7 @@
                     </TextView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="10dp"
                         android:layout_height="wrap_content"
                         android:text="밑위"
                         android:gravity="center"
@@ -198,7 +215,7 @@
                     </TextView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="밑단단면"
                         android:gravity="center"
@@ -213,8 +230,34 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/recycler_size"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/sizeTable"
+                tools:ignore="UnknownId"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/create2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="옷사진" />
+
+            <Button
+                android:id="@+id/create3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="쇼핑더" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

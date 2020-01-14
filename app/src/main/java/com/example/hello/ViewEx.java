@@ -27,11 +27,11 @@ public class ViewEx extends View {
         canvas.drawPath(firstPath(sizeClasses.get(0)),MyPaint);
 
         ArrayList<Integer> colors=new ArrayList<>();
-        colors.add(Color.RED);
-        colors.add(Color.BLUE);
-        colors.add(Color.YELLOW);
-        colors.add(Color.GREEN);
-        colors.add(Color.MAGENTA);
+        colors.add(Color.parseColor("#e53935"));
+        colors.add(Color.parseColor("#9575cd"));
+        colors.add(Color.parseColor("#1976d2"));
+        colors.add(Color.parseColor("#43a047"));
+        colors.add(Color.parseColor("#ff7043"));
 
         MyPaint.setStrokeWidth(3.5f);
         for (int i=1;i<sizeClasses.size();i++){
@@ -50,26 +50,26 @@ public class ViewEx extends View {
         float HemCross = sizeInfo.get(4) * 6;
 
         Path path = new Path();
-        path.moveTo(540,360);//배꼽쓰시작
+        path.moveTo(500,245);//배꼽쓰시작
         float beltLine = 40* (Thigh - Waist/2)/(20 + Rise);
 
-        path.lineTo(( 540 - Waist/2 ), 360);//허리반
-        path.cubicTo(( 540 - Waist/2 ),360,540 - Thigh,385 + Rise,(540 - Waist*4/10 - HemCross/2),360+ TotalLength);
-        path.lineTo((540 - Waist*4/10 + HemCross/2), 360+ TotalLength);//왼쪽 밑단
-        path.lineTo(540, 360 + Rise);//가랭쓰
-        path.lineTo(540 + Waist*4/10 - HemCross/2, 360+ TotalLength);//안따리쓰
-        path.lineTo(540 + Waist*4/10 + HemCross/2, 360+ TotalLength);//오른밑단쓰
-        path.cubicTo(540 + Waist*4/10 + HemCross/2,360+TotalLength,540 + Thigh,385 + Rise,540+ Waist/2,360);
-        path.lineTo(540,360);
+        path.lineTo(( 500 - Waist/2 ), 245);//허리반
+        path.cubicTo(( 500 - Waist/2 ),245,500 - Thigh,255 + Rise,(500 - Waist*4/10 - HemCross/2),245+ TotalLength);
+        path.lineTo((500 - Waist*4/10 + HemCross/2), 245+ TotalLength);//왼쪽 밑단
+        path.lineTo(500, 245 + Rise);//가랭쓰
+        path.lineTo(500 + Waist*4/10 - HemCross/2, 245+ TotalLength);//안따리쓰
+        path.lineTo(500 + Waist*4/10 + HemCross/2, 245+ TotalLength);//오른밑단쓰
+        path.cubicTo(500 + Waist*4/10 + HemCross/2,245+TotalLength,500 + Thigh,255 + Rise,500+ Waist/2,245);
+        path.lineTo(500,245);
 
-        path.moveTo(540 - Waist/2 - beltLine,400);//벨트라인
-        path.lineTo(540 + Waist/2 + beltLine ,400);
+        path.moveTo(500 - Waist/2 - beltLine,285);//벨트라인
+        path.lineTo(500 + Waist/2 + beltLine ,285);
 
-        path.moveTo(540,400);
-        path.lineTo(540,360 + Rise);//지퍼
-        path.moveTo(540, 400 + (Rise - 40)*15/20);//지퍼 대각선라인
-        path.lineTo(570,370 + (Rise - 40)*15/20);
-        path.lineTo(570,400);
+        path.moveTo(500,285);
+        path.lineTo(500,245 + Rise);//지퍼
+        path.moveTo(500, 285 + (Rise - 40)*15/20);//지퍼 대각선라인
+        path.lineTo(530,255 + (Rise - 40)*15/20);
+        path.lineTo(530,285);
 
         return path;
     }
@@ -84,20 +84,20 @@ public class ViewEx extends View {
         float HemCross = sizeInfo.get(4) * 6;
 
         Path path = new Path();
-        path.moveTo(540,360);//배꼽쓰시작
+        path.moveTo(500,245);//배꼽쓰시작
         float beltLine = 40* (Thigh - Waist/2)/(20 + Rise);
 
-        path.lineTo(( 540 - Waist/2 ), 360);//허리반
-        path.cubicTo(( 540 - Waist/2 ),360,540 - Thigh,385 + Rise,(540 - Waist*4/10 - HemCross/2),360+ TotalLength);
-        path.lineTo((540 - Waist*4/10 + HemCross/2), 360+ TotalLength);//왼쪽 밑단
-        path.lineTo(540, 360 + Rise);//가랭쓰
-        path.lineTo(540 + Waist*4/10 - HemCross/2, 360+ TotalLength);//안따리쓰
-        path.lineTo(540 + Waist*4/10 + HemCross/2, 360+ TotalLength);//오른밑단쓰
-        path.cubicTo(540 + Waist*4/10 + HemCross/2,360+TotalLength,540 + Thigh,385 + Rise,540+ Waist/2,360);
-        path.lineTo(540,360);
+        path.lineTo(( 500 - Waist/2 ), 245);//허리반
+        path.cubicTo(( 500 - Waist/2 ),245,500 - Thigh,255 + Rise,(500 - Waist*4/10 - HemCross/2),245+ TotalLength);
+        path.lineTo((500 - Waist*4/10 + HemCross/2), 245+ TotalLength);//왼쪽 밑단
+        path.lineTo(500, 245 + Rise);//가랭쓰
+        path.lineTo(500 + Waist*4/10 - HemCross/2, 245+ TotalLength);//안따리쓰
+        path.lineTo(500 + Waist*4/10 + HemCross/2, 245+ TotalLength);//오른밑단쓰
+        path.cubicTo(500 + Waist*4/10 + HemCross/2,245+TotalLength,500 + Thigh,255 + Rise,500+ Waist/2,245);
+        path.lineTo(500,245);
 
-        path.moveTo(540 - Waist/2 - beltLine,400);//벨트라인
-        path.lineTo(540 + Waist/2 + beltLine ,400);
+        path.moveTo(500 - Waist/2 - beltLine,285);//벨트라인
+        path.lineTo(500 + Waist/2 + beltLine ,285);
 
         return path;
     }
