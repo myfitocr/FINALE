@@ -1,12 +1,15 @@
 package com.example.hello.ui.Tab1;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,14 +39,61 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        final SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("PersonDB", Context.MODE_PRIVATE);
+
+
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         createbtn = root.findViewById(R.id.create);
+
+        final TextView totalLengthTextView = (TextView) root.findViewById(R.id.totalLegnth);
+        final TextView waistTextView = (TextView) root.findViewById(R.id.waist);
+        final TextView thighTextView = (TextView) root.findViewById(R.id.thigh);
+        final TextView riseTextView = (TextView) root.findViewById(R.id.rise);
+        final TextView hemcrossTextView = (TextView) root.findViewById(R.id.hemcross);
+
+        if (!sharedPreferences.getString("totalLength", "not").equals("not")){
+            totalLengthTextView.setText(sharedPreferences.getString("totalLength",""));
+            waistTextView.setText(sharedPreferences.getString("waist",""));
+            thighTextView.setText(sharedPreferences.getString("thigh",""));
+            riseTextView.setText(sharedPreferences.getString("rise",""));
+            hemcrossTextView.setText(sharedPreferences.getString("hemcross",""));
+            System.out.println("tlqkf");
+        }else{
+//            System.out.println("tlqkf2");
+//            totalLengthTextView.setText("96");
+//            totalLengthTextView.setTextColor(Color.parseColor("#6d6d6d"));
+//            waistTextView.setText("39");
+//            waistTextView.setTextColor(Color.parseColor("#6d6d6d"));
+//            thighTextView.setText("28.5");
+//            thighTextView.setTextColor(Color.parseColor("#6d6d6d"));
+//            riseTextView.setText("27");
+//            riseTextView.setTextColor(Color.parseColor("#6d6d6d"));
+//            hemcrossTextView.setText("16.5");
+//            hemcrossTextView.setTextColor(Color.parseColor("#6d6d6d"));
+        }
         createbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createFloatingWidget(v);
+                if(totalLengthTextView.getText().toString().equals("") || waistTextView.getText().toString().equals("") || thighTextView.getText().toString().equals("") ||
+                        riseTextView.getText().toString().equals("") || hemcrossTextView.getText().toString().equals("")){
+                    Toast.makeText(getContext(), "정보를 전부 기입해주세요~", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("totalLength", totalLengthTextView.getText().toString());
+                    editor.putString("waist", waistTextView.getText().toString());
+                    editor.putString("thigh", thighTextView.getText().toString());
+                    editor.putString("rise", riseTextView.getText().toString());
+                    editor.putString("hemcross", hemcrossTextView.getText().toString());
+                    editor.apply();
+                    editor.commit();
+                    Log.v("test_1",(sharedPreferences.getString("totalLength","2")));
+                    System.out.println("qudtls");
+                    createFloatingWidget(v);
+                }
             }
         });
         //ImageView imageView = getView().findViewById(R.id.imageView);

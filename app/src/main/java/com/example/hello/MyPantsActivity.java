@@ -1,7 +1,11 @@
 package com.example.hello;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -35,6 +39,8 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
 
     SizeClass test;
 
+
+
     private SlidrInterface slidr;
     private SlidrConfig config= new SlidrConfig.Builder()
             .position(SlidrPosition.LEFT)
@@ -46,6 +52,8 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_pants);
+        final SharedPreferences sharedPreferences = this.getSharedPreferences("PersonDB", Context.MODE_PRIVATE);
+        Log.v("test_2",(sharedPreferences.getString("totalLength","")));
 
 
         slidr= Slidr.attach(this,config);
@@ -96,11 +104,12 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
 
         /**사용자 정보 sizeClass 에서 sizeInfo 받아오기**/
         ArrayList<Float> Info2 = new ArrayList<>();
-        Info2.add((float) 94);
-        Info2.add((float) 37.5);
-        Info2.add((float) 28);
-        Info2.add((float) 25);
-        Info2.add((float) 18);
+        Info2.add(Float.parseFloat(sharedPreferences.getString("totalLength","")));
+        Info2.add(Float.parseFloat(sharedPreferences.getString("waist","")));
+        Info2.add(Float.parseFloat(sharedPreferences.getString("thigh","")));
+        Info2.add(Float.parseFloat(sharedPreferences.getString("rise","")));
+        Info2.add(Float.parseFloat(sharedPreferences.getString("hemcross","")));
+
         myFit.setSizeInfo(Info2);
 
         checkedSize.add(myFit);

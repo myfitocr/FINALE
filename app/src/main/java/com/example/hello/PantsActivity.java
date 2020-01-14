@@ -1,7 +1,9 @@
 package com.example.hello;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -10,8 +12,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -43,7 +47,6 @@ public class PantsActivity extends AppCompatActivity implements CompoundButton.O
     Button createbn1;
     private static final int DRAW_OVER_OTHER_APP_PERMISSION_REQUEST_CODE = 1222;
 
-
     ArrayList<String> items = new ArrayList<>();
     ArrayList<CheckBox> checkBoxes = new ArrayList<>();
 
@@ -65,7 +68,8 @@ public class PantsActivity extends AppCompatActivity implements CompoundButton.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pants);
-
+        final SharedPreferences sharedPreferences = this.getSharedPreferences("PersonDB", Context.MODE_PRIVATE);
+        Log.v("test_2",(sharedPreferences.getString("totalLength","")));
         dataPath = getFilesDir() + "/tesseract/";
         checkFile(new File(dataPath+"tessdata/"),"kor");
         checkFile(new File(dataPath+"tessdata/"),"eng");
@@ -159,11 +163,12 @@ public class PantsActivity extends AppCompatActivity implements CompoundButton.O
 
         /**사용자 정보 sizeClass 에서 sizeInfo 받아오기**/
         ArrayList<Float> Info = new ArrayList<>();
-        Info.add((float) 94);
-        Info.add((float) 37.5);
-        Info.add((float) 28);
-        Info.add((float) 25);
-        Info.add((float) 18);
+        System.out.println(sharedPreferences.getString("totalLength",""));
+        Info.add(Float.parseFloat(sharedPreferences.getString("totalLength","")));
+        Info.add(Float.parseFloat(sharedPreferences.getString("waist","")));
+        Info.add(Float.parseFloat(sharedPreferences.getString("thigh","")));
+        Info.add(Float.parseFloat(sharedPreferences.getString("rise","")));
+        Info.add(Float.parseFloat(sharedPreferences.getString("hemcross","")));
         myFit.setSizeInfo(Info);
 
         checkedSize.add(myFit);
