@@ -90,7 +90,7 @@ public class FloatingWidgetService2 extends Service implements View.OnClickListe
     /*  Add Floating Widget View to Window Manager  */
     private void addFloatingWidgetView(LayoutInflater inflater) {
         //Inflate the floating view layout we created
-        mFloatingWidgetView = inflater.inflate(R.layout.floating_widget_layout, null);
+        mFloatingWidgetView = inflater.inflate(R.layout.floating_widget_layout_2, null);
 
         //Add the view to the window.
         final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
