@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
@@ -51,6 +52,9 @@ public class MyPantsActivity extends AppCompatActivity implements CompoundButton
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_my_pants);
         final SharedPreferences sharedPreferences = this.getSharedPreferences("PersonDB", Context.MODE_PRIVATE);
         Log.v("test_2",(sharedPreferences.getString("totalLength","")));

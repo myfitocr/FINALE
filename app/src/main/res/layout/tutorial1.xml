@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/tutorial1"
-        android:layout_width="286dp"
-        android:layout_height="77dp"
+        android:layout_width="280dp"
+        android:layout_height="109dp"
 
-        android:fontFamily="@font/godiclight"
+        android:fontFamily="@font/mainfont"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="13dp"
         android:text="사이즈 갖고 \n 더이상 고민하지 마세요!"
@@ -23,14 +23,14 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/tutorial2"
-        android:layout_width="246dp"
-        android:layout_height="140dp"
+        android:layout_width="251dp"
+        android:layout_height="157dp"
 
-        android:fontFamily="@font/godiclight"
+        android:fontFamily="@font/mainfont"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="13dp"
         android:text="myfit은 \n 여러분에게 맞는 옷을\n 알려드립니다."
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.554" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
         android:id="@+id/button"
@@ -49,6 +49,7 @@
         android:layout_height="44dp"
         android:background="@drawable/buttondesign"
         android:text="계속"
+        android:fontFamily="@font/mainfont"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

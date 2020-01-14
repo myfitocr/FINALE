@@ -25,7 +25,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="8dp"
-                android:src="@mipmap/ic_launcher_round"
+                android:src="@mipmap/ruler"
                 tools:ignore="ContentDescription" />
 
             <!--   Close button to close Floating Widget View  -->
@@ -45,9 +45,10 @@
 
             <ImageView
                 android:id="@+id/floating_widget_image_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/ruler" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
