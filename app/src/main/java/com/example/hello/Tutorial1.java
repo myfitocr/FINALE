@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,6 +22,9 @@ public class Tutorial1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.tutorial1);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         textView = findViewById(R.id.tutorial1);
         textView1 = findViewById(R.id.tutorial2);
         button = findViewById(R.id.button);

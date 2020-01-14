@@ -41,11 +41,10 @@ dependencies {
     implementation 'com.rmtheis:tess-two:9.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-
     implementation 'com.google.android.material:material:1.2.0-alpha03' //material design
     implementation 'com.makeramen:roundedimageview:2.3.0'//rounded image view
-
     implementation 'com.r0adkll:slidableactivity:2.0.6'
 
+    implementation 'com.android.support:design:29.0.0'
 
 }
