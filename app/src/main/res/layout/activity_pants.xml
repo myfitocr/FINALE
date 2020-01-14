@@ -10,9 +10,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="match_parent"
         android:layout_weight="3"
+        android:orientation="horizontal"
         android:weightSum="10">
 
         <LinearLayout
@@ -25,16 +25,16 @@
         </LinearLayout>
 
         <Button
-        android:id="@+id/create2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="옷사진"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+            android:id="@+id/create2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="옷사진"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.765" />
 
         <Button
             android:id="@+id/create3"
@@ -49,88 +49,88 @@
             app:layout_constraintVertical_bias="0.765" />
 
         <LinearLayout
-            android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_weight="8">
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb0">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb1">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb2">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb3">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb4">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb5">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb6">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb7">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb8">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="S"
-                android:id="@+id/cb9">
+                android:text="S">
 
             </androidx.appcompat.widget.AppCompatCheckBox>
 
